@@ -3,10 +3,10 @@ module.exports = {
   extends: '@react-native',
   ignorePatterns: [
     '.kilo/',
-    'docs-local/',
-    '.superpowers/',
     'node_modules/',
     'android/',
     'ios/',
+    'docs-local/',
+    'tests/',
   ],
 };

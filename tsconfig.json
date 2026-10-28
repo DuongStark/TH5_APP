@@ -1,14 +1,5 @@
 {
   "extends": "@react-native/typescript-config",
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": [
-    "**/node_modules",
-    "**/Pods",
-    ".kilo",
-    "docs-local",
-    ".superpowers"
-  ],
-  "compilerOptions": {
-    "types": ["react"]
-  }
+  "exclude": ["**/node_modules", "**/Pods", ".kilo", "docs-local", "tests"]
 }

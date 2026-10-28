@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mây — Hai cuộc trò chuyện</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        background: #e8e4e1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        overflow: hidden;
+      }
+      .devices {
+        display: flex;
+        gap: 24px;
+      }
+      .device {
+        width: calc(414px * var(--scale, 1));
+        height: calc(894px * var(--scale, 1));
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 14px 50px #30252b18;
+      }
+      iframe {
+        border: 0;
+        width: 414px;
+        height: 894px;
+        transform: scale(var(--scale, 1));
+        transform-origin: top left;
+        display: block;
+        background: #faf9f6;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="devices" aria-label="Hai điện thoại trò chuyện realtime">
+      <div class="device">
+        <iframe
+          src="./index.html?instance=left&amp;embed=1"
+          title="Điện thoại thứ nhất"
+          allow="geolocation"
+        ></iframe>
+      </div>
+      <div class="device">
+        <iframe
+          src="./index.html?instance=right&amp;embed=1"
+          title="Điện thoại thứ hai"
+          allow="geolocation"
+        ></iframe>
+      </div>
+    </main>
+    <script>
+      // Thu nhỏ cả hai khung theo cùng tỷ lệ để vừa màn hình máy tính.
+      function fitDevices() {
+        const scale = Math.min(
+          1,
+          (innerWidth - 56) / 828,
+          (innerHeight - 32) / 894,
+        );
+        document.documentElement.style.setProperty(
+          '--scale',
+          Math.max(0.1, scale),
+        );
+      }
+      fitDevices();
+      window.addEventListener('resize', fitDevices);
+    </script>
+  </body>
+</html>

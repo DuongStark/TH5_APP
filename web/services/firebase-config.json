@@ -1,0 +1,9 @@
+{
+  "useEmulators": false,
+  "emulatorHost": "",
+  "apiKey": "AIzaSyB-FNgLmlghG0vNK-epI5iKl8l7bvxo55U",
+  "authDomain": "may-chat-bai5-duongstark.firebaseapp.com",
+  "projectId": "may-chat-bai5-duongstark",
+  "appId": "1:123020023397:web:9437dd2c53ad067ecb188c",
+  "databaseURL": "https://may-chat-bai5-duongstark-default-rtdb.asia-southeast1.firebasedatabase.app"
+}
